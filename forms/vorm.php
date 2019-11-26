@@ -12,11 +12,16 @@
   <title>06 - PHP - Vormid</title>
 </head>
 <body>
-<h1>Pood OÜ</h1>
-<form action="tellimine.php" method="get">
-    Toode 1 <input type="text" name="t1"><br>
-    Toode 2 <input type="text" name="t2"><br>
-    Toode 3 <input type="text" name="t3"><br>
+<h1>Arvutused</h1>
+<form action="arvutused.php" method="get">
+    <h2>Kera</h2>
+    raadius <input type="text" name="kera-raadius"><br><hr>
+    <h2>Koonus</h2>
+    raadius <input type="text" name="koonuse-raadius"><br>
+    kõrgus <input type="text" name="koonuse-korgus"><br><hr>
+    <h2>Silinder</h2>
+    raadius <input type="text" name="silindri-raadius"><br>
+    kõrgus <input type="text" name="silindri-korgus"><br>
   <input type="submit" value="Saada">
 </form>
 </body>
