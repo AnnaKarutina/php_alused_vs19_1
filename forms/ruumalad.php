@@ -1,6 +1,6 @@
 <?php
 /**
- * file name: vorm.php;
+ * file name: ruumalad.php;
  * autor: anna.karutina;
  * date: 26.11.2019;
  */
@@ -13,7 +13,7 @@
 </head>
 <body>
 <h1>Arvutused</h1>
-<form action="vorm.php" method="get">
+<form action="<?php echo $_SERVER['PHP_SELF'];?>" method="get">
     <h2>Kera</h2>
     raadius <input type="text" name="kera-raadius"><br><hr>
     <h2>Koonus</h2>
