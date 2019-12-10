@@ -27,3 +27,19 @@ function query($sql, $link){
   // kui $result === true
   return $result;
 }
+
+// SELECT, SHOW, DESCRIBE or EXPLAIN sql jaoks
+function getData($sql, $link){
+  $result = query($sql, $link); // saadame päring meie funktsiooni abil
+  $data = array(); // siin salvestame päringu andmed
+  // nii kaua, kui andmed on, loeme need
+  while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)){
+    $data[] = $row; // ja salvestame meie massiivi
+  }
+  // kui massiiv on tühi - andmete lugemise probleem
+  if(count($data) == 0){
+    return false;
+  }
+  // muidu tagastame loetud andmed
+  return $data;
+}
