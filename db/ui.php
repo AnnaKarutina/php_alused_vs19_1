@@ -44,3 +44,26 @@ function lisaKlient(){
         <input type="submit" value="Salvesta">
     </form>';
 }
+
+// h06 tabeli väljund
+function table06($dbResult, $heading){
+  echo '<table>';
+  echo '<thead>';
+  echo '<tr>';
+  foreach ($heading as $th){
+    echo '<th>'.$th.'</th>';
+  }
+  echo '</tr>';
+  echo '</thead>';
+  echo '<tbody>';
+  foreach ($dbResult as $row => $klient){
+    echo '<tr>';
+    echo '<td>'.$klient['enimi'].'</td>';
+    echo '<td>'.$klient['pnimi'].'</td>';
+    echo '<td>'.$klient['kontakt'].'</td>';
+    echo '<td><a href="?kustutaID='.$klient['id'].'">kustuta</a></td>';
+    echo '</tr>';
+  }
+  echo '</tbody>';
+  echo '</table>';
+}
