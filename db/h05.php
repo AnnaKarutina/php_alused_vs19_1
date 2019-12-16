@@ -26,3 +26,8 @@ if(isset($_GET['enimi']) && isset($_GET['pnimi'])) {
     echo 'Viimati lisatud ID: ' . mysqli_insert_id($ikt) . '<br>';
   }
 }
+
+// kontrollime andmed andmebaasist
+$sql = 'SELECT enimi,pnimi,kontakt FROM kliendid';
+$result = getData($sql, $ikt);
+table01($result, array('Eesnimi', 'Perenimi', 'Kontakt'));
