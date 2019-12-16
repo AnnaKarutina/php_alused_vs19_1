@@ -5,13 +5,14 @@
  * date: 16.12.2019;
  */
 // h01 tabeli väljund
-function table01($dbResult){
+function table01($dbResult, $heading){
   echo '<table>';
     echo '<thead>';
-      echo '<tr>
-                <th>Kooli nimi</th>
-                <th>2012</th>
-            </tr>';
+      echo '<tr>';
+      foreach ($heading as $th){
+        echo '<th>'.$th.'</th>';
+      }
+      echo '</tr>';
     echo '</thead>';
     echo '<tbody>';
       foreach ($dbResult as $row => $schoolData){
@@ -23,4 +24,13 @@ function table01($dbResult){
       }
     echo '</tbody>';
   echo '</table>';
+}
+
+// h03 otsingu vorm
+function otsing(){
+  echo '<form action="" method="get">
+		<label for="otsi">Kool</label>
+		<input type="text" name="otsi" id="otsi">
+		<input type="submit" value="Otsi"> 
+	</form>';
 }
