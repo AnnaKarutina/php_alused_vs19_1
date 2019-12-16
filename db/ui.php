@@ -34,3 +34,13 @@ function otsing(){
 		<input type="submit" value="Otsi"> 
 	</form>';
 }
+
+// h05 andmete lisamise jaoks
+function lisaKlient(){
+  echo '<form action="" method="get">
+        <label for="enimi">Eesnimi</label> <input type="text" name="enimi" id="enimi"><br>
+        <label for="pnimi">Perenimi</label> <input type="text" name="pnimi" id="pnimi"><br>
+        <label for="kontakt">Kontakt</label> <input type="text" name="kontakt" id="kontakt"><br>
+        <input type="submit" value="Salvesta">
+    </form>';
+}
